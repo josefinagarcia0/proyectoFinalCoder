@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Comfortaa:wght@300&family=Roboto:wght@100&display=swap");
+.main-home .principal .btn {
+  margin: 5px;
+  padding: 1em 2em;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: #b8b8b8;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none; }
+
+.main-home .principal .btn:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); }
+
+.main-home .principal .btn:active {
+  transform: translateY(-1px); }
+
+/* ------------ resets ------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Belleza", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+/* ---------- estilos header ------------ */
+header {
+  background-color: white;
+  height: 11vh;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1); }
+
+/* ------------ estilos navbar bs ------------- */
+.navbar {
+  background-color: white;
+  min-height: 80px; }
+
+.nav-item {
+  padding: 10px; }
+
+.logo img {
+  width: 150px; }
+
+.navbar-nav {
+  padding-top: 0.7rem; }
+
+.navbar-nav .active {
+  text-decoration: underline wavy #cac3b3;
+  text-underline-offset: 6px; }
+
+/* ---------- estilos footer (all pages) ------------ */
+footer {
+  background-color: whitesmoke;
+  padding: 4rem 0; }
+
+footer .social a > i {
+  font-size: 30px;
+  padding: 2rem 0.8rem;
+  color: black; }
+
+/* ---------- estilos main home/index ------------ */
+.main-home {
+  background-image: url(../img/obra-fondo2.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; }
+  .main-home .principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+    position: relative; }
+    .main-home .principal h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 900;
+      letter-spacing: 3px;
+      min-width: 280px; }
+    .main-home .principal h2 {
+      text-align: center;
+      font-size: 1em;
+      font-weight: 100; }
+    .main-home .principal p {
+      display: none; }
+    .main-home .principal .btn a {
+      color: black; }
+
+.main-home:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(214, 214, 214, 0.4); }
+
+/* --------- estilos section home/index --------- */
+.section-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px;
+  padding: 20px; }
+  .section-home h3 {
+    font-size: 40px;
+    letter-spacing: 3px; }
+  .section-home .wrapper {
+    display: flex;
+    justify-content: space-evenly; }
+    .section-home .wrapper .contenedor-img {
+      width: 300px;
+      height: 400px;
+      margin: 20px; }
+      .section-home .wrapper .contenedor-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .section-home .wrapper .contenedor-img:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25); }
+  .section-home .carousel-control-prev {
+    background-color: #4f4f4f;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%); }
+  .section-home .carousel-control-next {
+    background-color: #4f4f4f;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%); }
+
+/* ------------- media queries ------------- */
+@media screen and (min-width: 550px) {
+  /* ------ mq home ------ */
+  .main-home .principal p {
+    display: block;
+    max-width: 800px;
+    font-size: 1.2em;
+    padding: 30px;
+    text-align: center; } }
+
+@media screen and (min-width: 720px) {
+  /* ------ mq home ------ */
+  .contenedor-img {
+    width: 400px;
+    height: 500px; } }
+
+@media screen and (min-width: 1080px) {
+  /* ------ mq home ------ */
+  .section-home .contenedor-img {
+    width: 500px;
+    height: 600px; } }
