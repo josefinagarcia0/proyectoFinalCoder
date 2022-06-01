@@ -1,0 +1,28 @@
+/* --------- estilos sobre mi/pages --------- */
+.sobre-mi{
+    @include flex (column, center);
+    margin: 30px;
+    padding: 30px;
+
+    .imagen-sobreMi{
+        grid-area: imagen;
+        @include medidas (350px, 350px);
+
+        img{
+            @include medidas-img;
+            border-radius: 50%;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .parrafo{
+        grid-area: texto;
+        min-width: 350px;
+
+        p{
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+}

@@ -29,14 +29,13 @@
   list-style: none;
   text-decoration: none;
   font-family: "Belleza", sans-serif; }
-
-a {
-  text-decoration: none; }
+  * a {
+    text-decoration: none; }
 
 /* ---------- estilos header ------------ */
 header {
   background-color: white;
-  height: 11vh;
+  height: fit-content;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -46,29 +45,49 @@ header {
 .navbar {
   background-color: white;
   min-height: 80px; }
+  .navbar .logo img {
+    width: 150px; }
+  .navbar .navbar-nav {
+    padding-top: 0.7rem; }
+    .navbar .navbar-nav .nav-item {
+      padding: 10px; }
+  .navbar .active {
+    text-decoration: underline wavy #cac3b3;
+    text-underline-offset: 6px; }
 
-.nav-item {
-  padding: 10px; }
-
-.logo img {
-  width: 150px; }
-
-.navbar-nav {
-  padding-top: 0.7rem; }
-
-.navbar-nav .active {
-  text-decoration: underline wavy #cac3b3;
-  text-underline-offset: 6px; }
+/* ---------- estilos main (ruta de especificidad all pages) ----------  */
+.ruta-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1rem; }
+  .ruta-nav .title {
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 5px; }
+  .ruta-nav .ruta {
+    align-self: flex-start;
+    text-align: left;
+    padding: 10px 100px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 200px; }
+    .ruta-nav .ruta a {
+      color: rgba(0, 0, 0, 0.399); }
+      .ruta-nav .ruta a:hover {
+        text-decoration: underline; }
 
 /* ---------- estilos footer (all pages) ------------ */
 footer {
   background-color: whitesmoke;
   padding: 4rem 0; }
-
-footer .social a > i {
-  font-size: 30px;
-  padding: 2rem 0.8rem;
-  color: black; }
+  footer .social a > i {
+    font-size: 30px;
+    padding: 2rem 0.8rem;
+    color: black; }
 
 /* ---------- estilos main home/index ------------ */
 .main-home {
@@ -156,6 +175,32 @@ footer .social a > i {
     top: 50%;
     transform: translateY(-50%); }
 
+/* --------- estilos sobre mi/pages --------- */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 30px; }
+  .sobre-mi .imagen-sobreMi {
+    grid-area: imagen;
+    width: 350px;
+    height: 350px; }
+    .sobre-mi .imagen-sobreMi img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25); }
+  .sobre-mi .parrafo {
+    grid-area: texto;
+    min-width: 350px; }
+    .sobre-mi .parrafo p {
+      text-align: center;
+      padding: 10px;
+      margin: 10px; }
+
 /* ------------- media queries ------------- */
 @media screen and (min-width: 550px) {
   /* ------ mq home ------ */
@@ -170,10 +215,32 @@ footer .social a > i {
   /* ------ mq home ------ */
   .contenedor-img {
     width: 400px;
-    height: 500px; } }
+    height: 500px; }
+  /* mq - sobre mi */
+  .parrafo {
+    min-width: 500px; } }
 
 @media screen and (min-width: 1080px) {
   /* ------ mq home ------ */
   .section-home .contenedor-img {
     width: 500px;
-    height: 600px; } }
+    height: 600px; }
+  /* mq - sobre mi */
+  .sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "texto imagen";
+    justify-items: center;
+    align-items: center; }
+    .sobre-mi .imagen-sobreMi {
+      width: 400px;
+      height: 400px; }
+    .sobre-mi .parrafo p {
+      font-size: larger;
+      text-align: left; } }
+
+@media screen and (min-width: 1400px) {
+  /* mq - sobre mi */
+  .sobre-mi .imagen-sobreMi {
+    width: 450px;
+    height: 450px; } }

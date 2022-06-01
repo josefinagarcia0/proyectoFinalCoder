@@ -19,6 +19,11 @@
         width: 400px;
         height: 500px;
     }
+
+    /* mq - sobre mi */
+    .parrafo{
+        min-width: 500px;
+    }
 }
 
 @media screen and (min-width:1080px) {
@@ -28,4 +33,36 @@
         width: 500px;
         height: 600px;
     }
+
+    /* mq - sobre mi */
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "texto imagen";
+        justify-items: center;
+        align-items: center;
+
+        .imagen-sobreMi{
+            @include medidas (400px, 400px);
+        }
+
+        .parrafo{
+
+            p{
+                font-size: larger;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1400px) {
+
+    /* mq - sobre mi */
+    .sobre-mi{
+
+        .imagen-sobreMi{
+            @include medidas (450px, 450px);
+        }
+    }    
 }
