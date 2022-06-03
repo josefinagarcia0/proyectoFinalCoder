@@ -12,6 +12,10 @@
     <!-- link Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="owl_carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/owl.theme.default.css">
+
     <!-- link css -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -65,60 +69,41 @@
 
     <!--  ======================= Section ==============================  -->
 
-    <section class="section-home">
-        <div>
-            <h3>Novedades</h3>
+    <section class="section-carousel">
+        <div class="row my-5">
+            <h1 class="text-center">Novedades</h1>
         </div>
-        <div id="carouselExampleControls" class="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="wrapper">
-                        <div class="d-block contenedor-img">
-                            <img src="img/obras/cuadro1.jpeg" alt="Cuadro Pintado">
-                        </div>
-                        <div class="d-none d-lg-block contenedor-img">
-                            <img src="img/obras/cuadro2.jpeg" alt="Cuadro Pintado">
-                        </div>
-                        <div class="d-none d-xl-block contenedor-img">
-                            <img src="img/obras/cuadro3.jpeg" alt="Cuadro Pintado">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="wrapper">
-                        <div class="d-block contenedor-img">
-                            <img src="img/obras/tela1.png" alt="Telar Pintado">
-                        </div>
-                        <div class="d-none d-lg-block contenedor-img">
-                            <img src="img/obras/tela2.jpeg" alt="Telar Pintado">
-                        </div>
-                        <div class="d-none d-xl-block contenedor-img">
-                            <img src="img/obras/tela3.jpeg" alt="Telar Pintado">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="wrapper">
-                        <div class=" d-block contenedor-img">
-                            <img src="img/obras/cuadro4.jpeg" alt="Cuadro Pintado">
-                        </div>
-                        <div class="d-none d-lg-block contenedor-img">
-                            <img src="img/obras/tela4.jpeg" alt="Telar Pintado">
-                        </div>
-                        <div class="d-none d-xl-block contenedor-img">
-                            <img src="img/obras/cuadro5.jpeg" alt="Cuadro Pintado">
-                        </div>
-                    </div>
+        <div class="row g-4 my-5 mx-auto owl-carousel owl-theme">
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/cuadro1.png" alt="" class="img-fluid d-block mx-auto">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/tela3.jpeg" alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/cuadro2.jpeg" alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/tela2.jpeg" alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/cuadro3.png" alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
+            <div class="col product-item mx-auto">
+                <div class="produc-img">
+                    <img src="img/obras/tela1.png" alt="" class="img-fluid d-block mx-auto">
+                </div>
+            </div>
         </div>
     </section>
     
@@ -142,8 +127,15 @@
     </footer>
 
 
-    <!-- Bootstrap js -->
+    <!-- link Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <!-- link Bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- owl carousel -->
+    <script src="owl_carousel/owl.carousel.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
