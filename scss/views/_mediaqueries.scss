@@ -29,10 +29,19 @@
 @media screen and (min-width:1080px) {
 
     /* ------ mq home ------ */
-    .section-home .contenedor-img{
-        width: 500px;
-        height: 600px;
+    .section-desc{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "desc img";
+        justify-items: center;
+        align-items: center;
+
+        .img-desc{
+            grid-area: img;
+            height: 100%;
+        }
     }
+
 
     /* mq - sobre mi */
     .sobre-mi{

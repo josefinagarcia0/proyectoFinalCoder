@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Belleza&family=Comfortaa:wght@300&family=Roboto:wght@100&display=swap");
-.main-home .principal .btn {
+.section-desc .desc .btn {
   margin: 5px;
   padding: 1em 2em;
   font-size: 10px;
@@ -14,11 +14,11 @@
   cursor: pointer;
   outline: none; }
 
-.main-home .principal .btn:hover {
+.section-desc .desc .btn:hover {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px); }
 
-.main-home .principal .btn:active {
+.section-desc .desc .btn:active {
   transform: translateY(-1px); }
 
 /* ------------ resets ------------- */
@@ -32,9 +32,13 @@
   * a {
     text-decoration: none; }
 
+.body-home {
+  background-color: #cac3b3; }
+
 /* ---------- estilos header ------------ */
 header {
   background-color: white;
+  width: 100%;
   height: fit-content;
   position: sticky;
   top: 0;
@@ -109,35 +113,74 @@ footer {
     align-items: center;
     padding: 50px;
     margin: 50px;
+    min-width: 500px;
     position: relative; }
     .main-home .principal h1 {
-      text-align: center;
-      font-size: 2.5em;
+      font-size: 3rem;
       font-weight: 900;
-      letter-spacing: 3px;
-      min-width: 280px; }
+      letter-spacing: 3px; }
     .main-home .principal h2 {
-      text-align: center;
-      font-size: 1em;
+      font-size: 1.5rem;
       font-weight: 100; }
-    .main-home .principal p {
-      display: none; }
-    .main-home .principal .btn a {
-      color: black; }
+  .main-home:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(214, 214, 214, 0.4); }
 
-.main-home:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(214, 214, 214, 0.4); }
+/* --------- estilos section description home/index ----------- */
+.section-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  height: 90vh;
+  overflow: hidden;
+  margin: 30px;
+  background-color: white; }
+  .section-desc .desc {
+    grid-area: desc;
+    padding: 30px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .section-desc .desc p {
+      max-width: 800px;
+      font-size: 1.2em;
+      padding: 10px;
+      text-align: center; }
+    .section-desc .desc .btn a {
+      color: black; }
+  .section-desc .img-desc {
+    grid-area: img;
+    width: 100%;
+    height: 50%;
+    overflow: hidden; }
+    .section-desc .img-desc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 /* --------- estilos section carousel home/index ----------- */
-.product-item {
-  border: 1px solid #d7d7d7;
-  width: 300px; }
+.section-carousel {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .section-carousel h3 {
+    font-size: 3em;
+    font-weight: 100; }
+  .section-carousel .product-item {
+    border: 1px solid #d7d7d7;
+    width: 300px; }
 
 /* --------- estilos sobre mi/pages --------- */
 .sobre-mi {
@@ -186,9 +229,15 @@ footer {
 
 @media screen and (min-width: 1080px) {
   /* ------ mq home ------ */
-  .section-home .contenedor-img {
-    width: 500px;
-    height: 600px; }
+  .section-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "desc img";
+    justify-items: center;
+    align-items: center; }
+    .section-desc .img-desc {
+      grid-area: img;
+      height: 100%; }
   /* mq - sobre mi */
   .sobre-mi {
     display: grid;
