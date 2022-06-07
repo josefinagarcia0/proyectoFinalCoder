@@ -93,6 +93,25 @@
         grid-area: galeria;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
+
+    /* mq - contacto */
+    .contacto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info form";
+        justify-items: center;
+
+        .data-contacto{ 
+            text-align: left;
+
+            iframe{
+                display: block !important;
+                padding-top: 20px;
+                width: 400px; 
+                height: 250px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:1400px) {

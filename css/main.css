@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Belleza&family=Comfortaa:wght@300&family=Roboto:wght@100&display=swap");
-.section-desc .desc .btn {
+.section-desc .desc .btn, .contacto .form-contacto .btn {
   margin: 5px;
   padding: 1em 2em;
   font-size: 10px;
@@ -14,11 +14,11 @@
   cursor: pointer;
   outline: none; }
 
-.section-desc .desc .btn:hover {
+.section-desc .desc .btn:hover, .contacto .form-contacto .btn:hover {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px); }
 
-.section-desc .desc .btn:active {
+.section-desc .desc .btn:active, .contacto .form-contacto .btn:active {
   transform: translateY(-1px); }
 
 /* ------------ resets ------------- */
@@ -246,6 +246,86 @@ footer {
           padding: 10px;
           letter-spacing: 2px; }
 
+/* --------- estilos contacto/pages --------- */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px 30px 30px;
+  overflow: hidden; }
+  .contacto .data-contacto {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px; }
+    .contacto .data-contacto li {
+      padding: 8px; }
+      .contacto .data-contacto li iframe {
+        display: none; }
+  .contacto .form-contacto {
+    grid-area: form;
+    width: 100%;
+    max-width: 500px; }
+    .contacto .form-contacto form {
+      margin: 30px; }
+      .contacto .form-contacto form .input-container {
+        width: 100%;
+        position: relative;
+        margin: 40px 0px; }
+        .contacto .form-contacto form .input-container .label {
+          position: absolute;
+          left: 10px;
+          top: 14px;
+          transition: all 0.2s;
+          padding: 0 2px;
+          z-index: 1;
+          color: #b3b3b3;
+          user-select: none; }
+          .contacto .form-contacto form .input-container .label::before {
+            content: "";
+            height: 5px;
+            background-color: whitesmoke;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 100%;
+            z-index: -1; }
+        .contacto .form-contacto form .input-container .text-input {
+          padding: 0.8rem;
+          width: 100%;
+          height: 100%;
+          border: 2px solid black;
+          background-color: whitesmoke;
+          border-radius: 5px;
+          font-size: 18px;
+          outline: none;
+          transition: all 0.3s;
+          color: white; }
+          .contacto .form-contacto form .input-container .text-input:focus {
+            border: 2px solid #aa8a6b; }
+          .contacto .form-contacto form .input-container .text-input:focus + .label {
+            top: -10pX;
+            color: #aa8a6b;
+            font-size: 18px;
+            /* text-shadow: 1.5px 1px 2px rgba(38, 38, 38, 0.493); */ }
+          .contacto .form-contacto form .input-container .text-input::placeholder {
+            font-size: 16px;
+            opacity: 0;
+            transition: all 0.3s; }
+          .contacto .form-contacto form .input-container .text-input:focus::placeholder {
+            opacity: 1; }
+          .contacto .form-contacto form .input-container .text-input:not(:placeholder-shown) + .label {
+            top: -10px;
+            color: #aa8a6b;
+            font-size: 18; }
+    .contacto .form-contacto .btn {
+      margin-bottom: 30px; }
+      .contacto .form-contacto .btn a {
+        color: black; }
+
 /* ------------- media queries ------------- */
 @media screen and (min-width: 550px) {
   /* ------ mq home ------ */
@@ -308,7 +388,20 @@ footer {
   /* mq - coleccion */
   .galeria {
     grid-area: galeria;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  /* mq - contacto */
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info form";
+    justify-items: center; }
+    .contacto .data-contacto {
+      text-align: left; }
+      .contacto .data-contacto iframe {
+        display: block !important;
+        padding-top: 20px;
+        width: 400px;
+        height: 250px; } }
 
 @media screen and (min-width: 1400px) {
   /* mq - sobre mi */

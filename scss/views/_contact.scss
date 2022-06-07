@@ -1,0 +1,102 @@
+/* --------- estilos contacto/pages --------- */
+.contacto{
+    @include flex (column, center);
+    margin: 0px 30px 30px 30px;
+    overflow: hidden;
+
+    .data-contacto{
+        grid-area: info;
+        @include flex (column, center);
+        max-width: 500px;
+
+        li{
+            padding: 8px;
+
+            iframe{
+                display: none;
+            }
+        }
+    }
+
+    .form-contacto{
+        grid-area: form;
+        width: 100%;
+        max-width: 500px;
+
+        form{
+            margin: 30px;
+
+            .input-container{
+                width: 100%;
+                position: relative;
+                margin: 40px 0px;
+            
+                .label{
+                    position: absolute;
+                    left: 10px;
+                    top: 14px;
+                    transition: all 0.2s;
+                    padding: 0 2px;
+                    z-index: 1;
+                    color: #b3b3b3;
+                    user-select: none;
+            
+                    &::before{
+                        content: "";
+                        height: 5px;
+                        background-color: whitesmoke;
+                        position: absolute;
+                        left:0;
+                        top: 10px;
+                        width: 100%;
+                        z-index: -1;
+                    }
+                }
+            
+                .text-input{
+                    padding: 0.8rem;
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid $color-secundario;
+                    background-color: whitesmoke;
+                    border-radius:5px;
+                    font-size:18px;
+                    outline: none;
+                    transition: all 0.3s;
+                    color: $color-principal;
+            
+                    &:focus{
+                        border: 2px solid $color-inputs;
+                    }
+                    &:focus + .label{
+                        top: -10pX;
+                        color: $color-inputs;
+                        font-size: 18px;
+                        /* text-shadow: 1.5px 1px 2px rgba(38, 38, 38, 0.493); */
+                    }
+                    &::placeholder{
+                        font-size:16px;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+                    &:focus::placeholder{
+                        opacity: 1;
+                    }
+                    &:not(:placeholder-shown)+ .label{
+                        top: -10px;
+                        color: $color-inputs;
+                        font-size: 18;
+                    }
+                }
+            }
+        }
+
+        .btn{
+            margin-bottom: 30px;
+            @extend %botones;
+            a{
+                color: $color-secundario;
+            }
+        }
+    }
+}
