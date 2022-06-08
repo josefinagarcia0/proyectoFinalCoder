@@ -112,6 +112,13 @@
             }
         }
     }
+
+    /* mq - faqs */
+    .main-faqs{
+        .accordion{
+            width: 80%;
+        }
+    }
 }
 
 @media screen and (min-width:1400px) {
@@ -126,6 +133,13 @@
     
     .galeria{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* mq - faqs */
+    .main-faqs{
+        .accordion{
+            width: 60%;
+        }
     }
 }
 

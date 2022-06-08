@@ -323,6 +323,24 @@ footer {
       .contacto .form-contacto .btn a {
         color: black; }
 
+/* --------- estilos preguntas frecuentes/pages --------- */
+.main-faqs {
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  margin: 0px 50px; }
+  .main-faqs .accordion {
+    width: 100%; }
+  .main-faqs .accordion-button:not(.collapsed) {
+    color: inherit;
+    background: #c19a9a;
+    color: white; }
+    .main-faqs .accordion-button:not(.collapsed)::after {
+      filter: brightness(0%) invert(100%); }
+  .main-faqs .accordion-button:focus {
+    box-shadow: inherit; }
+
 /* ------------- media queries ------------- */
 @media screen and (min-width: 550px) {
   /* ------ mq home ------ */
@@ -398,7 +416,10 @@ footer {
         display: block !important;
         padding-top: 20px;
         width: 400px;
-        height: 250px; } }
+        height: 250px; }
+  /* mq - faqs */
+  .main-faqs .accordion {
+    width: 80%; } }
 
 @media screen and (min-width: 1400px) {
   /* mq - sobre mi */
@@ -406,7 +427,10 @@ footer {
     width: 450px;
     height: 450px; }
   .galeria {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } }
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  /* mq - faqs */
+  .main-faqs .accordion {
+    width: 60%; } }
 
 /* ------- mq - coleccion (desktop first) -------------*/
 @media screen and (max-width: 720px) {

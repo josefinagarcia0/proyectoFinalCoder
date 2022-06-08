@@ -1,0 +1,27 @@
+/* --------- estilos preguntas frecuentes/pages --------- */
+.main-faqs{
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    margin: 0px 50px;
+
+    .accordion{
+        width: 100%;
+    }
+
+    .accordion-button{
+        &:not(.collapsed){
+            color: inherit;
+            background: $color-paleta-rosa;
+            color: $color-principal;
+            &::after{
+                filter: brightness(0%) invert(100%) ;
+            }
+        }
+
+        &:focus{
+            box-shadow: inherit;
+        }
+    }
+}
