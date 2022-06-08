@@ -33,9 +33,6 @@
     text-decoration: none;
     color: black; }
 
-.body-home {
-  background-color: #cac3b3; }
-
 /* ---------- estilos header ------------ */
 header {
   background-color: white;
@@ -48,10 +45,9 @@ header {
 
 /* ------------ estilos navbar bs ------------- */
 .navbar {
-  background-color: white;
-  min-height: 80px; }
+  background-color: white; }
   .navbar .logo img {
-    width: 150px; }
+    width: 120px; }
   .navbar .navbar-nav {
     padding-top: 0.7rem; }
     .navbar .navbar-nav .nav-item {
@@ -78,7 +74,7 @@ header {
     text-align: left;
     padding: 10px 100px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-width: 200px; }
     .ruta-nav .ruta a {
       color: rgba(0, 0, 0, 0.399); }
@@ -88,7 +84,7 @@ header {
 /* ---------- estilos footer (all pages) ------------ */
 footer {
   background-color: whitesmoke;
-  padding: 4rem 0; }
+  padding: 4rem 1rem; }
   footer .social a > i {
     font-size: 30px;
     padding: 2rem 0.8rem;
@@ -117,11 +113,11 @@ footer {
     min-width: 500px;
     position: relative; }
     .main-home .principal h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 900;
       letter-spacing: 3px; }
     .main-home .principal h2 {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 100; }
   .main-home:before {
     content: '';
@@ -177,7 +173,7 @@ footer {
   justify-content: center;
   align-items: center; }
   .section-carousel h3 {
-    font-size: 3em;
+    font-size: 1rem;
     font-weight: 100; }
   .section-carousel .product-item {
     border: 1px solid #d7d7d7;
@@ -241,6 +237,7 @@ footer {
       .aside .menu li a {
         color: black; }
         .aside .menu li a h2 {
+          font-size: 1rem;
           border: 2px solid rgba(0, 0, 0, 0.399);
           border-radius: 10px;
           padding: 10px;
