@@ -36,10 +36,15 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         }
         .menu {
-            h2{
-                border: none !important;
-                text-decoration: 1px underline;
-                text-underline-offset: 9px;
+            li{
+                a{
+                    h2{
+                        padding-left: 30px;
+                        border: none;
+                        text-decoration: 1px underline;
+                        text-underline-offset: 9px;
+                    }
+                }
             }
             .submenu li a:hover{
                 color: rgb(83, 83, 83);

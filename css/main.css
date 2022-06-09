@@ -72,7 +72,6 @@ header {
   .ruta-nav .ruta {
     align-self: flex-start;
     text-align: left;
-    padding: 10px 100px;
     font-weight: bold;
     font-size: 1rem;
     min-width: 200px; }
@@ -173,7 +172,7 @@ footer {
   justify-content: center;
   align-items: center; }
   .section-carousel h3 {
-    font-size: 1rem;
+    font-size: 2.5rem;
     font-weight: 100; }
   .section-carousel .product-item {
     border: 1px solid #d7d7d7;
@@ -367,8 +366,9 @@ footer {
     .main-coleccion .galeria {
       grid-area: galeria;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .main-coleccion .menu h2 {
-      border: none !important;
+    .main-coleccion .menu li a h2 {
+      padding-left: 30px;
+      border: none;
       text-decoration: 1px underline;
       text-underline-offset: 9px; }
     .main-coleccion .menu .submenu li a:hover {
