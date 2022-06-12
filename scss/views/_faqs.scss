@@ -1,27 +1,36 @@
 /* --------- estilos preguntas frecuentes/pages --------- */
 .main-faqs{
-    border: 2px solid green;
     display: flex;
     justify-content: center;
-    height: 70vh;
+    height: fit-content;
+    min-height: 70vh;
     margin: 0px 50px;
 
     .accordion{
         width: 100%;
-    }
+        .accordion-item{
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
 
-    .accordion-button{
-        &:not(.collapsed){
-            color: inherit;
-            background: $color-paleta-rosa;
-            color: $color-principal;
-            &::after{
-                filter: brightness(0%) invert(100%) ;
+        .accordion-button{
+            font-size: 1.3rem;
+            &:not(.collapsed){
+                color: inherit;
+                background: $color-paleta-rosa;
+                color: $color-principal;
+                &::after{
+                    filter: brightness(0%) invert(100%) ;
+                }
+            }
+    
+            &:focus{
+                box-shadow: inherit;
             }
         }
 
-        &:focus{
-            box-shadow: inherit;
+        a{
+            color: $color-paleta-rosa;
+            text-decoration: underline;
         }
     }
 }

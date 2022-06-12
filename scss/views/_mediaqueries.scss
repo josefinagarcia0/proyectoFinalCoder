@@ -20,12 +20,12 @@
         height: 500px;
     }
 
-    /* mq - sobre mi */
+    /* ------ mq - sobre mi ------ */
     .parrafo{
         min-width: 500px;
     }
 
-    /* mq - coleccion */
+    /* ------ mq - coleccion ------ */
     .main-coleccion{
         display: grid;
         grid-template-columns: 1fr 5fr;
@@ -56,6 +56,12 @@
 }
 
 @media screen and (min-width:1080px) {
+    /* ------ mq general (ruta) ------ */
+    .ruta-nav{
+        .ruta{
+            padding-left: 6rem;
+        }
+    }
 
     /* ------ mq home ------ */
     .section-desc{
@@ -72,7 +78,7 @@
     }
 
 
-    /* mq - sobre mi */
+    /* ------mq - sobre mi ------ */
     .sobre-mi{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -93,13 +99,13 @@
         }
     }
 
-    /* mq - coleccion */
+    /* ------ mq - coleccion ------ */
     .galeria{
         grid-area: galeria;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
-    /* mq - contacto */
+    /* ------ mq - contacto ------ */
     .contacto{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -118,7 +124,7 @@
         }
     }
 
-    /* mq - faqs */
+    /* ------ mq - faqs ------ */
     .main-faqs{
         .accordion{
             width: 80%;
@@ -128,7 +134,7 @@
 
 @media screen and (min-width:1400px) {
 
-    /* mq - sobre mi */
+    /* ------ mq - sobre mi ------ */
     .sobre-mi{
 
         .imagen-sobreMi{
@@ -140,7 +146,7 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    /* mq - faqs */
+    /* ------ mq - faqs ------ */
     .main-faqs{
         .accordion{
             width: 60%;
@@ -151,7 +157,7 @@
 
 /* ------- mq - coleccion (desktop first) -------------*/
 @media screen and (max-width:720px) {
-    /* mq - coleccion */
+    /* ------ mq - coleccion ------ */
     .aside{
         font-size: medium;
 
