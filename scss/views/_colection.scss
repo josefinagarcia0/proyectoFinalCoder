@@ -4,7 +4,6 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     justify-items: center;
-    margin: 50px 80px;
 
     .galeria-img{
         @include medidas(80%, 80%);
@@ -54,8 +53,6 @@
         padding: 20px;
 
         li{
-            padding-top: 20px;
-
             a{
                 color: $color-secundario;
 
@@ -63,7 +60,7 @@
                     font-size: 1rem;
                     border: 2px solid $color-rutas;
                     border-radius: 10px;
-                    padding:10px;
+                    padding: 10px;
                     letter-spacing: 2px;
                 }
             }

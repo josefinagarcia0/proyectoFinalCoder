@@ -209,8 +209,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  justify-items: center;
-  margin: 50px 80px; }
+  justify-items: center; }
   .galeria .galeria-img {
     width: 80%;
     height: 80%;
@@ -248,16 +247,14 @@ footer {
   margin-left: 80px; }
   .aside .menu {
     padding: 20px; }
-    .aside .menu li {
-      padding-top: 20px; }
-      .aside .menu li a {
-        color: black; }
-        .aside .menu li a h2 {
-          font-size: 1rem;
-          border: 2px solid rgba(0, 0, 0, 0.399);
-          border-radius: 10px;
-          padding: 10px;
-          letter-spacing: 2px; }
+    .aside .menu li a {
+      color: black; }
+      .aside .menu li a h2 {
+        font-size: 1rem;
+        border: 2px solid rgba(0, 0, 0, 0.399);
+        border-radius: 10px;
+        padding: 10px;
+        letter-spacing: 2px; }
 
 /* --------- estilos contacto/pages --------- */
 .contacto {
@@ -345,7 +342,8 @@ footer {
   justify-content: center;
   height: fit-content;
   min-height: 70vh;
-  margin: 0px 50px; }
+  margin: 0px 50px;
+  margin-bottom: 50px; }
   .main-faqs .accordion {
     width: 100%; }
     .main-faqs .accordion .accordion-item {
@@ -392,13 +390,17 @@ footer {
     grid-template-columns: 1fr 5fr;
     grid-template-areas: "aside galeria"; }
     .main-coleccion .galeria {
+      margin: 35px 30px;
       grid-area: galeria;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .main-coleccion .menu li a h2 {
+      font-size: larger;
       padding-left: 30px;
       border: none;
       text-decoration: 1px underline;
       text-underline-offset: 9px; }
+    .main-coleccion .menu li .lista {
+      padding-top: 20px; }
     .main-coleccion .menu .submenu li a:hover {
       color: #535353;
       text-decoration: underline;

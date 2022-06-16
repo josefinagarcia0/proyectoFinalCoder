@@ -40,6 +40,7 @@
         grid-template-areas: "aside galeria";
 
         .galeria{
+            margin: 35px 30px;
             grid-area: galeria;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         }
@@ -47,11 +48,15 @@
             li{
                 a{
                     h2{
+                        font-size: larger;
                         padding-left: 30px;
                         border: none;
                         text-decoration: 1px underline;
                         text-underline-offset: 9px;
                     }
+                }
+                .lista{
+                    padding-top: 20px
                 }
             }
             .submenu li a:hover{
