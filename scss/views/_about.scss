@@ -6,7 +6,7 @@
 
     .imagen-sobreMi{
         grid-area: imagen;
-        @include medidas (350px, 350px);
+        @include medidas (280px, 280px);
 
         img{
             @include medidas-img;

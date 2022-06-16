@@ -21,8 +21,16 @@
     }
 
     /* ------ mq - sobre mi ------ */
-    .parrafo{
-        min-width: 500px;
+    .sobre-mi{
+    
+        .imagen-sobreMi{
+            grid-area: imagen;
+            @include medidas (350px, 350px);
+        }
+
+        .parrafo{
+            min-width: 500px;
+        }
     }
 
     /* ------ mq - coleccion ------ */

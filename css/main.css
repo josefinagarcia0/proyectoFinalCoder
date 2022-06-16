@@ -188,8 +188,8 @@ footer {
   padding: 30px; }
   .sobre-mi .imagen-sobreMi {
     grid-area: imagen;
-    width: 350px;
-    height: 350px; }
+    width: 280px;
+    height: 280px; }
     .sobre-mi .imagen-sobreMi img {
       width: 100%;
       height: 100%;
@@ -380,7 +380,11 @@ footer {
     width: 400px;
     height: 500px; }
   /* ------ mq - sobre mi ------ */
-  .parrafo {
+  .sobre-mi .imagen-sobreMi {
+    grid-area: imagen;
+    width: 350px;
+    height: 350px; }
+  .sobre-mi .parrafo {
     min-width: 500px; }
   /* ------ mq - coleccion ------ */
   .main-coleccion {
